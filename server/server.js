@@ -128,7 +128,9 @@ app.get("/api/dashboard", async (req, res, next) => {
 });
 
 // Serve frontend static build
-const clientDist = path.join(__dirname, "../client/dist");
+const candidateDist1 = path.join(__dirname, "../client/dist");
+const candidateDist2 = path.join(process.cwd(), "client/dist");
+const clientDist = fs.existsSync(candidateDist1) ? candidateDist1 : candidateDist2;
 app.use(express.static(clientDist));
 
 // SPA fallback for all non-API paths
