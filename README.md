@@ -1,3 +1,5 @@
+live link
+https://hospital-management-app-omega.vercel.app/
 # MediCare MERN Hospital Management System
 
 A full-stack educational hospital management app using MongoDB, Express, React, Node.js, Mongoose and Axios.
